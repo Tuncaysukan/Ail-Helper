@@ -1,0 +1,29 @@
+{
+  "name": "tncy/laravel-aihelper",
+  "description": "Laravel projelerine OpenAI, Anthropic gibi AI sağlayıcılarını kolayca entegre etmeni sağlayan yardımcı paket.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Tncy\\AiHelper\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tncy\\AiHelper\\AiHelperServiceProvider"
+      ],
+      "aliases": {
+        "Ai": "Tncy\\AiHelper\\Facades\\Ai"
+      }
+    }
+  },
+  "require": {
+    "php": "^8.2",
+    "laravel/framework": "^10.0|^11.0",
+    "guzzlehttp/guzzle": "^7.8"
+  }
+}
